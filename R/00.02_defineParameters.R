@@ -1,9 +1,11 @@
 # API Tokens #####
 
-# the location in directory for a twitter access token
+# the location in directory for a 
+# twitter access token
 tokenLocation <- "XXXXX"
 
-# the location in directory for a dropbox access token
+# the location in directory for a 
+# dropbox access token
 dbTokenLocation <- "XXXXX"
 
 tToken = readRDS(tokenLocation)
@@ -28,5 +30,15 @@ con <-
                  db = dbName,
                  password = dbPassword)
 
+# Website ####
 
+# Location of website code
+gitWebsiteAddress <- 
+  '/home/nadamsco/njadamscohen.github.io'
+
+# location of map images.
+map_outfile <-
+  paste0('/home/nadamsco/',
+         'njadamscohen.github.io/',
+         'pages/maps/')
 

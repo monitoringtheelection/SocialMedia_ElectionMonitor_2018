@@ -73,10 +73,11 @@ produceUSMap <- function(stateFreq, statePop, type = "perCapita"){
 
 
 # This map is for the 2018 website.
-createMapsForWeb <- function(inputData, 
-                             outfile, 
-                             statePopulation,
-                             typeMap = 'perCapita'){
+createMapsForWeb <- 
+  function(inputData, 
+           outfile, 
+           statePopulation,
+           typeMap = 'perCapita'){
   t.fraud <- inputData %>% 
     filter(!is.na(regExStateCodes)) %>%
     filter(fraud==T) %>%

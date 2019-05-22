@@ -44,7 +44,8 @@ fullTweets <-
 fullTweets <- 
   getPreciseStateCodes(fullTweets)
 
-# State code based on location field. Less precise.
+# State code based on location field. 
+# Less precise.
 fullTweets <- 
   getRegExStateCode(fullTweets,
                     checkStateCode = F)
@@ -59,13 +60,16 @@ fullTweets <-
 #   supplemented data to dropbox.
 ####
 
-uploadDailyData(fullTweets, 'test5_17_19', dbToken)
+uploadDailyData(fullTweets, 
+                'test_outfile', 
+                dbToken)
 
 
 ####
 # Fourth: 
 #   Run analytics. 
-#   These scripts ONLY work for 2018 issue categories.
+#   These scripts ONLY work for 
+#   2018 issue categories.
 ####
 
 
@@ -76,7 +80,8 @@ fullTweets$full_content <-
   str_to_lower(fullTweets$full_content)
 
 fullTweets <- 
-  getCatVar(fullTweets,categories_electionWords2018)
+  getCatVar(fullTweets,
+            categories_electionWords2018)
 
 dailyHourlyCounts.cat <- 
   makeHourlyCat.df(fullTweets,
@@ -88,7 +93,7 @@ dailyHourlyCounts.cat <-
 #     Maps
 
 createMapsForWeb(fullTweets, 
-                 outfile = 'map_outfile_test',
+                 outfile = map_outfile,
                  statePopulation,
                  'perCapita')
 
@@ -102,6 +107,5 @@ updateWebsiteCounts(gitWebsiteAddress,
                     newDailyVars)
 
 updateWebsiteMaps(gitWebsiteAddress)
-
 
 gitUpdateWebsite(gitWebsiteAddress)
