@@ -1,14 +1,10 @@
-# Project Title
+# Social Media Election Monitor 2018
 
 This is the code that ran the "Monitoring the Election 2018" Twitter monitor.
 
-The code is divided into two sections.
-1. , this roughly 
+This repository contains all the R code we use to analyze the Twitter data our group collected concerning the 2018 election every 24 hours. We also include the code we use to build our online portal.
 
-
-1. The R code, which runs analysis on Twitter data and updates an online monitor.
-
-2. The website.
+Please see http://monitoringtheelection.us for more details about this project.
 
 
 
